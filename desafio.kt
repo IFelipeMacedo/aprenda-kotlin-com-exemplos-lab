@@ -3,12 +3,12 @@ import java.util.*
 enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
 data class Usuario(val nome: String) {
-    val matricula: String = generateMatricula()
+    val matricula: String = gerarMatricula()
 
     companion object {
         private val matriculasExistente = mutableSetOf<String>()
 
-        private fun generateMatricula(): String {
+        private fun gerarMatricula(): String {
             val random = Random()
             var matricula: String
             do {
